@@ -70,7 +70,7 @@ import org.gjt.sp.util.ThreadUtilities;
  *
  * @author Slava Pestov
  * @author kpouer (rafactoring into standalone text area)
- * @version $Id$
+ * @version $Id: TextArea.java 25322 2020-05-08 17:26:24Z kpouer $
  */
 public abstract class TextArea extends JPanel
 {
@@ -148,6 +148,44 @@ public abstract class TextArea extends JPanel
 		// when setting the initial caret position for a buffer
 		// (eg, from the recent file list)
 		focusedComponent = this;
+	} //}}}
+
+	//{{{ toggleVerticalScrollbar() method
+	public void toggleVerticalScrollbar()
+	{
+		if (vertical.isVisible())
+		{
+			vertical.setVisible(false);
+		}
+		else
+		{
+			vertical.setVisible(true);
+		}
+	} //}}}
+
+	//{{{ isVerticalScrollbarVisible() method
+	public boolean isVerticalScrollbarVisible()
+	{
+		return vertical.isVisible();
+	} //}}}
+
+	//{{{ toggleHorizontalScrollbar() method
+	public void toggleHorizontalScrollbar()
+	{
+		if (horizontal.isVisible())
+		{
+			horizontal.setVisible(false);
+		}
+		else
+		{
+			horizontal.setVisible(true);
+		}
+	} //}}}
+
+	//{{{ isHorizontalScrollbarVisible() method
+	public boolean isHorizontalScrollbarVisible()
+	{
+		return horizontal.isVisible();
 	} //}}}
 
 	//{{{ getFoldPainter() method

@@ -208,6 +208,8 @@ edit=undo \
 	 - \
 	 goto-line \
 	 - \
+	 %toggle-scrollbars \
+     - \
 	 %text \
 	 %indent \
 	 %source
@@ -262,6 +264,14 @@ text=delete-line \
 	 - \
 	 to-lower \
 	 to-upper
+#}}}
+
+#{{{ Toggle Scrollbars menu
+toggle-scrollbars=toggle-vertical \
+     toggle-horizontal
+toggle-scrollbars.label=Toggle Scro$llbars
+toggle-vertical.label=Toggle $Vertical Scrollbar
+toggle-horizontal.label=Toggle $Horizontal Scrollbar
 #}}}
 
 #{{{ Indent menu
